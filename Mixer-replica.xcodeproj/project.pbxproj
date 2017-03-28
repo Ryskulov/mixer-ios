@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D04AA77D9EF1CBD9202C55B /* libPods-Mixer-replica.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3204CEE77FC0573F0850617 /* libPods-Mixer-replica.a */; };
+		A53D71C91E854C84001C91AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A53D71C81E854C84001C91AB /* main.m */; };
+		A53D71CC1E854C84001C91AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A53D71CB1E854C84001C91AB /* AppDelegate.m */; };
+		A53D71D21E854C84001C91AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A53D71D01E854C84001C91AB /* Main.storyboard */; };
+		A53D71D41E854C84001C91AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A53D71D31E854C84001C91AB /* Assets.xcassets */; };
+		A53D71D71E854C84001C91AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A53D71D51E854C84001C91AB /* LaunchScreen.storyboard */; };
+		A53D71E01E854E94001C91AB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53D71DF1E854E94001C91AB /* MainViewController.m */; };
+		A53D71E61E85502A001C91AB /* MainPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53D71E51E85502A001C91AB /* MainPageController.m */; };
+		A53D71EA1E855060001C91AB /* FavouritePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53D71E91E855060001C91AB /* FavouritePageController.m */; };
+		A53D71EC1E85506F001C91AB /* MainPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A53D71EB1E85506F001C91AB /* MainPage.storyboard */; };
+		A53D71EE1E85509E001C91AB /* FavouritePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A53D71ED1E85509E001C91AB /* FavouritePage.storyboard */; };
+		A53D71F21E855E16001C91AB /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = A53D71F11E855E16001C91AB /* Colors.m */; };
+		A53D71F61E856634001C91AB /* MainPageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A53D71F51E856634001C91AB /* MainPageCollectionViewCell.m */; };
+		A53D71F91E856B1D001C91AB /* APIInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = A53D71F81E856B1D001C91AB /* APIInteractor.m */; };
+		D62E02B51E894A2600375933 /* ItemJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E02B41E894A2600375933 /* ItemJsonModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		38FC4430A2654941EF49408D /* Pods-Mixer-replica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mixer-replica.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mixer-replica/Pods-Mixer-replica.release.xcconfig"; sourceTree = "<group>"; };
+		A53D71C41E854C84001C91AB /* Mixer-replica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mixer-replica.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A53D71C81E854C84001C91AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A53D71CA1E854C84001C91AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A53D71CB1E854C84001C91AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A53D71D11E854C84001C91AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A53D71D31E854C84001C91AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A53D71D61E854C84001C91AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A53D71D81E854C84001C91AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A53D71DE1E854E94001C91AB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A53D71DF1E854E94001C91AB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		A53D71E41E85502A001C91AB /* MainPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageController.h; sourceTree = "<group>"; };
+		A53D71E51E85502A001C91AB /* MainPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageController.m; sourceTree = "<group>"; };
+		A53D71E81E855060001C91AB /* FavouritePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavouritePageController.h; sourceTree = "<group>"; };
+		A53D71E91E855060001C91AB /* FavouritePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouritePageController.m; sourceTree = "<group>"; };
+		A53D71EB1E85506F001C91AB /* MainPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainPage.storyboard; sourceTree = "<group>"; };
+		A53D71ED1E85509E001C91AB /* FavouritePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FavouritePage.storyboard; sourceTree = "<group>"; };
+		A53D71F01E855E16001C91AB /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
+		A53D71F11E855E16001C91AB /* Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colors.m; sourceTree = "<group>"; };
+		A53D71F31E856103001C91AB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A53D71F41E856634001C91AB /* MainPageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageCollectionViewCell.h; sourceTree = "<group>"; };
+		A53D71F51E856634001C91AB /* MainPageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageCollectionViewCell.m; sourceTree = "<group>"; };
+		A53D71F71E856B1D001C91AB /* APIInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIInteractor.h; sourceTree = "<group>"; };
+		A53D71F81E856B1D001C91AB /* APIInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIInteractor.m; sourceTree = "<group>"; };
+		D3204CEE77FC0573F0850617 /* libPods-Mixer-replica.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mixer-replica.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D62E02B31E894A2600375933 /* ItemJsonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemJsonModel.h; sourceTree = "<group>"; };
+		D62E02B41E894A2600375933 /* ItemJsonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemJsonModel.m; sourceTree = "<group>"; };
+		EC6C6057037CEB7FF4BF0B55 /* Pods-Mixer-replica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mixer-replica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mixer-replica/Pods-Mixer-replica.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A53D71C11E854C84001C91AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D04AA77D9EF1CBD9202C55B /* libPods-Mixer-replica.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A53D71BB1E854C84001C91AB = {
+			isa = PBXGroup;
+			children = (
+				A53D71C61E854C84001C91AB /* Mixer-replica */,
+				A53D71C51E854C84001C91AB /* Products */,
+				B465E83B1D02FD16FFB2B314 /* Pods */,
+				DFC807F846414400EC424828 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A53D71C51E854C84001C91AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A53D71C41E854C84001C91AB /* Mixer-replica.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A53D71C61E854C84001C91AB /* Mixer-replica */ = {
+			isa = PBXGroup;
+			children = (
+				D62E02B21E8949C500375933 /* Entities */,
+				A53D71E11E854FA5001C91AB /* App Delegate */,
+				A53D71EF1E855DEC001C91AB /* Helpers */,
+				A53D71E21E854FB9001C91AB /* Main Controller */,
+				A53D71E31E854FCA001C91AB /* Main Page Sequence */,
+				A53D71E71E855047001C91AB /* Favourite Page Sequence */,
+				A53D71D31E854C84001C91AB /* Assets.xcassets */,
+				A53D71D51E854C84001C91AB /* LaunchScreen.storyboard */,
+				A53D71D81E854C84001C91AB /* Info.plist */,
+				A53D71C71E854C84001C91AB /* Supporting Files */,
+				A53D71F71E856B1D001C91AB /* APIInteractor.h */,
+				A53D71F81E856B1D001C91AB /* APIInteractor.m */,
+			);
+			path = "Mixer-replica";
+			sourceTree = "<group>";
+		};
+		A53D71C71E854C84001C91AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A53D71C81E854C84001C91AB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A53D71E11E854FA5001C91AB /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				A53D71CA1E854C84001C91AB /* AppDelegate.h */,
+				A53D71CB1E854C84001C91AB /* AppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		A53D71E21E854FB9001C91AB /* Main Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A53D71DE1E854E94001C91AB /* MainViewController.h */,
+				A53D71DF1E854E94001C91AB /* MainViewController.m */,
+				A53D71D01E854C84001C91AB /* Main.storyboard */,
+			);
+			name = "Main Controller";
+			sourceTree = "<group>";
+		};
+		A53D71E31E854FCA001C91AB /* Main Page Sequence */ = {
+			isa = PBXGroup;
+			children = (
+				A53D71E41E85502A001C91AB /* MainPageController.h */,
+				A53D71E51E85502A001C91AB /* MainPageController.m */,
+				A53D71F41E856634001C91AB /* MainPageCollectionViewCell.h */,
+				A53D71F51E856634001C91AB /* MainPageCollectionViewCell.m */,
+				A53D71EB1E85506F001C91AB /* MainPage.storyboard */,
+			);
+			name = "Main Page Sequence";
+			sourceTree = "<group>";
+		};
+		A53D71E71E855047001C91AB /* Favourite Page Sequence */ = {
+			isa = PBXGroup;
+			children = (
+				A53D71E81E855060001C91AB /* FavouritePageController.h */,
+				A53D71E91E855060001C91AB /* FavouritePageController.m */,
+				A53D71ED1E85509E001C91AB /* FavouritePage.storyboard */,
+			);
+			name = "Favourite Page Sequence";
+			sourceTree = "<group>";
+		};
+		A53D71EF1E855DEC001C91AB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A53D71F01E855E16001C91AB /* Colors.h */,
+				A53D71F11E855E16001C91AB /* Colors.m */,
+				A53D71F31E856103001C91AB /* PrefixHeader.pch */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		B465E83B1D02FD16FFB2B314 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC6C6057037CEB7FF4BF0B55 /* Pods-Mixer-replica.debug.xcconfig */,
+				38FC4430A2654941EF49408D /* Pods-Mixer-replica.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D62E02B21E8949C500375933 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				D62E02B31E894A2600375933 /* ItemJsonModel.h */,
+				D62E02B41E894A2600375933 /* ItemJsonModel.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		DFC807F846414400EC424828 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3204CEE77FC0573F0850617 /* libPods-Mixer-replica.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A53D71C31E854C84001C91AB /* Mixer-replica */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A53D71DB1E854C84001C91AB /* Build configuration list for PBXNativeTarget "Mixer-replica" */;
+			buildPhases = (
+				0AD5F8603D45CA364F22B5AC /* [CP] Check Pods Manifest.lock */,
+				A53D71C01E854C84001C91AB /* Sources */,
+				A53D71C11E854C84001C91AB /* Frameworks */,
+				A53D71C21E854C84001C91AB /* Resources */,
+				0A3B4D050B038C7EC8E19268 /* [CP] Embed Pods Frameworks */,
+				E32277AC43049D4D2207A554 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mixer-replica";
+			productName = "Mixer-replica";
+			productReference = A53D71C41E854C84001C91AB /* Mixer-replica.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A53D71BC1E854C84001C91AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Sunrise;
+				TargetAttributes = {
+					A53D71C31E854C84001C91AB = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9W56SANB4A;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A53D71BF1E854C84001C91AB /* Build configuration list for PBXProject "Mixer-replica" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A53D71BB1E854C84001C91AB;
+			productRefGroup = A53D71C51E854C84001C91AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A53D71C31E854C84001C91AB /* Mixer-replica */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A53D71C21E854C84001C91AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A53D71EC1E85506F001C91AB /* MainPage.storyboard in Resources */,
+				A53D71D71E854C84001C91AB /* LaunchScreen.storyboard in Resources */,
+				A53D71EE1E85509E001C91AB /* FavouritePage.storyboard in Resources */,
+				A53D71D41E854C84001C91AB /* Assets.xcassets in Resources */,
+				A53D71D21E854C84001C91AB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A3B4D050B038C7EC8E19268 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mixer-replica/Pods-Mixer-replica-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0AD5F8603D45CA364F22B5AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E32277AC43049D4D2207A554 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mixer-replica/Pods-Mixer-replica-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A53D71C01E854C84001C91AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A53D71CC1E854C84001C91AB /* AppDelegate.m in Sources */,
+				D62E02B51E894A2600375933 /* ItemJsonModel.m in Sources */,
+				A53D71F21E855E16001C91AB /* Colors.m in Sources */,
+				A53D71E61E85502A001C91AB /* MainPageController.m in Sources */,
+				A53D71F61E856634001C91AB /* MainPageCollectionViewCell.m in Sources */,
+				A53D71EA1E855060001C91AB /* FavouritePageController.m in Sources */,
+				A53D71E01E854E94001C91AB /* MainViewController.m in Sources */,
+				A53D71C91E854C84001C91AB /* main.m in Sources */,
+				A53D71F91E856B1D001C91AB /* APIInteractor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A53D71D01E854C84001C91AB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A53D71D11E854C84001C91AB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A53D71D51E854C84001C91AB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A53D71D61E854C84001C91AB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A53D71D91E854C84001C91AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A53D71DA1E854C84001C91AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A53D71DC1E854C84001C91AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC6C6057037CEB7FF4BF0B55 /* Pods-Mixer-replica.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9W56SANB4A;
+				GCC_PREFIX_HEADER = "Mixer-replica/PrefixHeader.pch";
+				INFOPLIST_FILE = "Mixer-replica/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ks.sunrise.Mixer-replica";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A53D71DD1E854C84001C91AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38FC4430A2654941EF49408D /* Pods-Mixer-replica.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9W56SANB4A;
+				GCC_PREFIX_HEADER = "Mixer-replica/PrefixHeader.pch";
+				INFOPLIST_FILE = "Mixer-replica/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ks.sunrise.Mixer-replica";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A53D71BF1E854C84001C91AB /* Build configuration list for PBXProject "Mixer-replica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A53D71D91E854C84001C91AB /* Debug */,
+				A53D71DA1E854C84001C91AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A53D71DB1E854C84001C91AB /* Build configuration list for PBXNativeTarget "Mixer-replica" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A53D71DC1E854C84001C91AB /* Debug */,
+				A53D71DD1E854C84001C91AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A53D71BC1E854C84001C91AB /* Project object */;
+}

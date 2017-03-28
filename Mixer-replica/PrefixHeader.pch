@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  Mixer-replica
+//
+//  Created by Sergey Roslyakov on 3/24/17.
+//  Copyright © 2017 Sunrise. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "Colors.h"
+
+#endif /* PrefixHeader_pch */
