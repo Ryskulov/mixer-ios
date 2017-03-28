@@ -19,6 +19,7 @@
 
 @end
 
+
 @implementation MainPageCollectionViewCell
 - (void) setupCell {
     self.titleLabel.text = self.item.title;   //[self.item objectForKey:@"title"];
