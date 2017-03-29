@@ -22,6 +22,7 @@
 		A53D71F61E856634001C91AB /* MainPageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A53D71F51E856634001C91AB /* MainPageCollectionViewCell.m */; };
 		A53D71F91E856B1D001C91AB /* APIInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = A53D71F81E856B1D001C91AB /* APIInteractor.m */; };
 		D62E02B51E894A2600375933 /* ItemJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D62E02B41E894A2600375933 /* ItemJsonModel.m */; };
+		D6EA69E11E8BF02A0037F8CE /* RoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EA69E01E8BF02A0037F8CE /* RoundedView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		D3204CEE77FC0573F0850617 /* libPods-Mixer-replica.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Mixer-replica.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D62E02B31E894A2600375933 /* ItemJsonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemJsonModel.h; sourceTree = "<group>"; };
 		D62E02B41E894A2600375933 /* ItemJsonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemJsonModel.m; sourceTree = "<group>"; };
+		D6EA69DF1E8BF02A0037F8CE /* RoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoundedView.h; sourceTree = "<group>"; };
+		D6EA69E01E8BF02A0037F8CE /* RoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoundedView.m; sourceTree = "<group>"; };
 		EC6C6057037CEB7FF4BF0B55 /* Pods-Mixer-replica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mixer-replica.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mixer-replica/Pods-Mixer-replica.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +91,8 @@
 		A53D71C61E854C84001C91AB /* Mixer-replica */ = {
 			isa = PBXGroup;
 			children = (
+				D6EA69DE1E8BF00B0037F8CE /* CustomUI */,
+				D6EA69DD1E8BEFFD0037F8CE /* New Group */,
 				D62E02B21E8949C500375933 /* Entities */,
 				A53D71E11E854FA5001C91AB /* App Delegate */,
 				A53D71EF1E855DEC001C91AB /* Helpers */,
@@ -179,6 +184,22 @@
 				D62E02B41E894A2600375933 /* ItemJsonModel.m */,
 			);
 			name = Entities;
+			sourceTree = "<group>";
+		};
+		D6EA69DD1E8BEFFD0037F8CE /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		D6EA69DE1E8BF00B0037F8CE /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				D6EA69DF1E8BF02A0037F8CE /* RoundedView.h */,
+				D6EA69E01E8BF02A0037F8CE /* RoundedView.m */,
+			);
+			name = CustomUI;
 			sourceTree = "<group>";
 		};
 		DFC807F846414400EC424828 /* Frameworks */ = {
@@ -322,6 +343,7 @@
 				A53D71EA1E855060001C91AB /* FavouritePageController.m in Sources */,
 				A53D71E01E854E94001C91AB /* MainViewController.m in Sources */,
 				A53D71C91E854C84001C91AB /* main.m in Sources */,
+				D6EA69E11E8BF02A0037F8CE /* RoundedView.m in Sources */,
 				A53D71F91E856B1D001C91AB /* APIInteractor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,6 +16,9 @@ static NSString * const mainCellReuseID = @"MainPageCellReuseID";
 @interface MainPageController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSMutableArray <ItemJsonModel *> *items;
+
+@property (assign, nonatomic) NSInteger currentPage;
+
 @end
 
 @implementation MainPageController
@@ -23,16 +26,24 @@ static NSString * const mainCellReuseID = @"MainPageCellReuseID";
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
+    self.currentPage = 1;
+    
 	self.items = [NSMutableArray array];
-	
-	[[APIInteractor new]
-	 getTestItemsWithCompletion:^(NSArray *result) {
-		 [self.items addObjectsFromArray:result];
-		 [self.collectionView reloadData];
-	 }
-	 error:^(NSError *error) {
-		 
-	 }];
+    self.collectionView.backgroundColor = [Colors commonGrayBackGround];
+    [self getitems];
+}
+
+
+- (void) getitems {
+    [[APIInteractor new]
+     getItemsForMainPageWithParamsPage:self.currentPage
+     completion:^(NSArray *result) {
+         [self.items addObjectsFromArray:result];
+         [self.collectionView reloadData];
+     }
+     error:^(NSError *error) {
+         
+     }];
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -43,6 +54,12 @@ static NSString * const mainCellReuseID = @"MainPageCellReuseID";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 	
+    if (indexPath.item + 1 == self.items.count) {
+        self.currentPage ++ ;
+        [self getitems];
+    }
+    
+    
 	MainPageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:mainCellReuseID forIndexPath:indexPath];
 	
 	cell.item = [self.items objectAtIndex:indexPath.item];
@@ -60,21 +77,21 @@ static NSString * const mainCellReuseID = @"MainPageCellReuseID";
    sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     CGSize sizeOfCell = CGSizeZero;
-    CGFloat width = ([UIScreen mainScreen].bounds.size.width / 2);
+    CGFloat width = ([UIScreen mainScreen].bounds.size.width / 2 - 0.5);
 //    CGFloat width = ([UIScreen mainScreen].bounds.size.width / 2) - 4; если хотим сделать расстояние между ячейками.
 
-    sizeOfCell = CGSizeMake(width, width * 2);
+    sizeOfCell = CGSizeMake(width, 310);
     return sizeOfCell;
 }
 
 
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return 0;
+    return 1;
 }
 
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
-    return 0;
+    return 1;
 }
 
 

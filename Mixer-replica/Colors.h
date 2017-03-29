@@ -13,4 +13,7 @@
 + (UIColor *) colorRed:(NSInteger) red green:(NSInteger) green blue:(NSInteger) blue;
 
 + (UIColor *) colorRed:(NSInteger) red green:(NSInteger) green blue:(NSInteger) blue alpha:(CGFloat) alpha;
+
++ (UIColor *) commonGrayBackGround;
+
 @end

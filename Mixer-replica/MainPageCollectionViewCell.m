@@ -8,6 +8,7 @@
 
 #import "MainPageCollectionViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "RoundedView.h"
 
 
 @interface MainPageCollectionViewCell ()
@@ -16,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *oldPriceLable;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *shopLable;
+@property (weak, nonatomic) IBOutlet RoundedView *shopNameBackView;
 
 @end
 
@@ -25,13 +27,24 @@
     self.titleLabel.text = self.item.title;   //[self.item objectForKey:@"title"];
     self.priceLable.text = self.item.priceSom;
     self.shopLable.text = self.item.shopName;
+    self.shopNameBackView.backgroundColor = [Colors commonGrayBackGround];
+    self.shopNameBackView.borderRadius = 8;
+
 //    self.oldPriceLable.text = self.item.
-    
+    NSString *mystr = [NSString stringWithFormat:@"%@ сом",self.item.priceSom];
     if (self.item.priceSomDiscount.length  > 0) {
+        self.oldPriceLable.hidden =NO;
         self.priceLable.text = self.item.priceSomDiscount;
-        self.oldPriceLable.text = self.item.priceSom;
+        
+        NSDictionary* attributes = @{
+                                     NSStrikethroughStyleAttributeName: [NSNumber numberWithInt:NSUnderlineStyleSingle]
+                                     };
+        NSAttributedString* attrText = [[NSAttributedString alloc] initWithString:mystr attributes:attributes];
+        self.oldPriceLable.attributedText = attrText;
+        
     } else {
-        self.priceLable.text = self.item.priceSom;
+        self.oldPriceLable.hidden = YES;
+        self.priceLable.text = mystr;
     }
     
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.item.pictureUrl]
@@ -42,4 +55,14 @@
                              }];
 }
 
+
+
+-(void)prepareForReuse {
+    [super prepareForReuse];
+    self.imageView.image = nil;
+    self.titleLabel.text = @"";
+    self.priceLable.text = nil;
+    self.oldPriceLable.text = @"";
+    self.shopLable.text = @"";
+}
 @end

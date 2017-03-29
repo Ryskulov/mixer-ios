@@ -11,7 +11,7 @@
 @implementation Colors
 + (UIColor *) colorRed:(NSInteger) red green:(NSInteger) green blue:(NSInteger) blue {
 	
-	return [UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue alpha:1];
+	return [UIColor colorWithRed:red/255.0f green:green/255.0f blue:blue/255.0f alpha:1];
 	
 }
 
@@ -20,4 +20,9 @@
 	return [UIColor colorWithRed:r/255.0f green:g/255.0f blue:blue alpha:alpha];
 	
 }
+
++ (UIColor *) commonGrayBackGround {
+    return [Colors colorRed:233 green:233 blue:233];
+}
+
 @end

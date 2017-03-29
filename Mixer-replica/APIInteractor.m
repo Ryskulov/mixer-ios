@@ -33,7 +33,7 @@ static NSString * const server = @"http://mixer.kg/";
 							  error:(errorBlock)errorB {
 	
 	
-    NSDictionary *params = @{@"page":@"2"};
+    NSDictionary *params = @{@"page":@"3"};
     
 	[self.manager GET:[NSString stringWithFormat:@"%@api/products", server]
 		   parameters:params
@@ -54,5 +54,31 @@ static NSString * const server = @"http://mixer.kg/";
 	
 }
 
+
+- (void) getItemsForMainPageWithParamsPage:(NSInteger) page
+                                completion:(successBlock) successB
+                                     error:(errorBlock) errorB {
+    
+    NSString *pageNum = [NSString stringWithFormat:@"%ld", page];
+    NSDictionary *params = @{@"page":pageNum};
+    
+    [self.manager GET:[NSString stringWithFormat:@"%@api/products", server]
+           parameters:params
+             progress:^(NSProgress * _Nonnull downloadProgress) {
+                 
+             }
+              success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                  NSError *jsonError = nil;
+                  NSArray *responseArray = [ItemJsonModel arrayOfModelsFromDictionaries:responseObject error:&jsonError];
+                  
+                  
+                  successB(responseArray);
+                  
+              }
+              failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                  
+              }];
+    
+}
 
 @end

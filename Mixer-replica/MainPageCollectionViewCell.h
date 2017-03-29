@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ItemJsonModel.h"
 
+
 @interface MainPageCollectionViewCell : UICollectionViewCell
 @property (strong, nonatomic) ItemJsonModel *item;
 

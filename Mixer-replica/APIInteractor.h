@@ -16,4 +16,8 @@ typedef void (^errorBlock)(NSError *error);
 @interface APIInteractor : NSObject
 - (void) getTestItemsWithCompletion:(successBlock)successB
 							  error:(errorBlock)errorB;
+
+- (void) getItemsForMainPageWithParamsPage:(NSInteger) page
+                                completion:(successBlock) successB
+                                     error:(errorBlock) errorB;
 @end
