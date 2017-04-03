@@ -33,7 +33,14 @@
 
 
 - (void) removeFromFavorute:(ItemJsonModel *)item {
-    
+    NSMutableArray *arr = [NSMutableArray arrayWithArray:[self getFavoriteItems]];
+    for (ItemJsonModel *favItem in arr ) {
+        if (favItem.itemId == item.itemId) {
+            [arr removeObject:favItem];
+            [self writeFavorites:arr];
+            return;
+        }
+    }
 }
 
 - (BOOL) isItemFavorite:(ItemJsonModel *)item {

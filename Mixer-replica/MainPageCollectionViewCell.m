@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet RoundedView *shopNameBackView;
 @property (weak, nonatomic) IBOutlet UIView *favoriteButtonBackgroundView;
 @property (weak, nonatomic) IBOutlet UIImageView *favoriteButtonImageView;
+@property (strong, nonatomic) UITapGestureRecognizer *myTapGesture;
 
 @end
 
@@ -45,11 +46,11 @@
 
 - (void) setupFavoriteButton {
     // Создаем распознователь касания
-    UITapGestureRecognizer *mytapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(favoriteButtonTapped)];
+    self.myTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(favoriteButtonTapped)];
     // Говорим. чтобы реагировал на 1 касание
-    mytapGesture.numberOfTapsRequired = 1;
+    self.myTapGesture.numberOfTapsRequired = 1;
     
-    [self.favoriteButtonBackgroundView addGestureRecognizer:mytapGesture];
+    [self.favoriteButtonBackgroundView addGestureRecognizer:self.myTapGesture];
 }
 
 - (void) favoriteButtonTapped {
@@ -108,5 +109,7 @@
     self.oldPriceLable.text = @"";
     self.shopLable.text = @"";
     self.isFavorite = nil;
+    [self.favoriteButtonBackgroundView removeGestureRecognizer:self.myTapGesture];
+    self.myTapGesture = nil;
 }
 @end
