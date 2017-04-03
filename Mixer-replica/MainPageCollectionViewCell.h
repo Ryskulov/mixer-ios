@@ -10,8 +10,19 @@
 #import "ItemJsonModel.h"
 
 
+@protocol MainCellDelegate <NSObject>
+
+@required
+- (void) addToFavorite:(ItemJsonModel *)item;
+- (void) deleteFromFavorite:(ItemJsonModel *)item;
+@end
+
+
 @interface MainPageCollectionViewCell : UICollectionViewCell
 @property (strong, nonatomic) ItemJsonModel *item;
+@property (assign, nonatomic) BOOL isFavorite;
+
+@property (weak, nonatomic) id<MainCellDelegate> delegate;
 
 - (void) setupCell;
 @end

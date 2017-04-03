@@ -18,16 +18,59 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *shopLable;
 @property (weak, nonatomic) IBOutlet RoundedView *shopNameBackView;
+@property (weak, nonatomic) IBOutlet UIView *favoriteButtonBackgroundView;
+@property (weak, nonatomic) IBOutlet UIImageView *favoriteButtonImageView;
 
 @end
 
 
 @implementation MainPageCollectionViewCell
+
+
 - (void) setupCell {
+    [self setupData];
+    [self setupAppearence];
+    [self setupFavoriteButton];
+}
+
+
+- (void) setupAppearence {
+    self.shopNameBackView.backgroundColor = [Colors commonGrayBackGround];
+    if (self.isFavorite) {
+        self.favoriteButtonBackgroundView.backgroundColor = [Colors yellowFavoriteColor];
+    } else {
+        self.favoriteButtonBackgroundView.backgroundColor = [Colors commonGrayBackGround];
+    }
+}
+
+- (void) setupFavoriteButton {
+    // Создаем распознователь касания
+    UITapGestureRecognizer *mytapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(favoriteButtonTapped)];
+    // Говорим. чтобы реагировал на 1 касание
+    mytapGesture.numberOfTapsRequired = 1;
+    
+    [self.favoriteButtonBackgroundView addGestureRecognizer:mytapGesture];
+}
+
+- (void) favoriteButtonTapped {
+    if (self.isFavorite) {
+        [self.delegate deleteFromFavorite:self.item];
+        self.favoriteButtonBackgroundView.backgroundColor = [Colors commonGrayBackGround];
+        self.isFavorite = NO;
+    } else {
+        [self.delegate addToFavorite:self.item];
+        self.favoriteButtonBackgroundView.backgroundColor = [Colors yellowFavoriteColor];
+        self.isFavorite = YES;
+    }
+    
+    
+}
+
+
+- (void) setupData {
     self.titleLabel.text = self.item.title;   //[self.item objectForKey:@"title"];
     self.priceLable.text = self.item.priceSom;
     self.shopLable.text = self.item.shopName;
-    self.shopNameBackView.backgroundColor = [Colors commonGrayBackGround];
     self.shopNameBackView.borderRadius = 8;
 
 //    self.oldPriceLable.text = self.item.
@@ -64,5 +107,6 @@
     self.priceLable.text = nil;
     self.oldPriceLable.text = @"";
     self.shopLable.text = @"";
+    self.isFavorite = nil;
 }
 @end

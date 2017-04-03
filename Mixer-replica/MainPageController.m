@@ -9,14 +9,14 @@
 #import "MainPageController.h"
 #import "MainPageCollectionViewCell.h"
 #import "APIInteractor.h"
-
+#import "FavoriteManager.h"
 
 static NSString * const mainCellReuseID = @"MainPageCellReuseID";
 
-@interface MainPageController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface MainPageController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, MainCellDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSMutableArray <ItemJsonModel *> *items;
-
+@property (strong, nonatomic) FavoriteManager *favManager;
 @property (assign, nonatomic) NSInteger currentPage;
 
 @end
@@ -25,7 +25,7 @@ static NSString * const mainCellReuseID = @"MainPageCellReuseID";
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	
+    self.favManager = [FavoriteManager new];
     self.currentPage = 1;
     
 	self.items = [NSMutableArray array];
@@ -62,8 +62,10 @@ static NSString * const mainCellReuseID = @"MainPageCellReuseID";
     
 	MainPageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:mainCellReuseID forIndexPath:indexPath];
 	
-	cell.item = [self.items objectAtIndex:indexPath.item];
-	
+    ItemJsonModel *item = [self.items objectAtIndex:indexPath.item];
+    cell.item = item;
+    cell.isFavorite = [self.favManager isItemFavorite:item];
+    cell.delegate = self;
 	[cell setupCell];
 		
 	return cell;
@@ -95,4 +97,17 @@ static NSString * const mainCellReuseID = @"MainPageCellReuseID";
 }
 
 
+#pragma mark - MainCellDelegate
+
+-(void)addToFavorite:(ItemJsonModel *)item {
+    
+    [self.favManager saveToFavorite:item];
+    
+}
+
+-(void)deleteFromFavorite:(ItemJsonModel *)item {
+    
+    [self.favManager removeFromFavorute:item];
+    
+}
 @end

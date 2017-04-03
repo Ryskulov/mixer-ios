@@ -16,4 +16,6 @@
 
 + (UIColor *) commonGrayBackGround;
 
++ (UIColor *) yellowFavoriteColor;
+
 @end

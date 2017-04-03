@@ -25,4 +25,8 @@
     return [Colors colorRed:233 green:233 blue:233];
 }
 
++ (UIColor *) yellowFavoriteColor {
+    return [Colors colorRed:237 green:185 blue:58];
+}
+
 @end
